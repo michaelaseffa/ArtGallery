@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+public class Gallery {
+    private List<Art> artworks = new ArrayList<>();
+    public void addArt(Art art) {
+        artworks.add(art);
+        System.out.println("Art added: " + art.getName());
+    }
+
+    public void displayGallery() {
+        if (artworks.isEmpty()) {
+            System.out.println("\nGallery is empty.");
+            return;
+        }
+        System.out.println("\n--- Art Gallery ---");
+        for (Art art : artworks) {
+            art.displayInfo();
+            System.out.println("-------------------");
+        }
+    }
+}
